@@ -1,4 +1,4 @@
-package tests;
+package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
 
-    private final SelenideElement firstNameInput = $("#firstName"), // посмотреть правильный локкаторы у Васенкова, и проверь свои!!!!!
+    private final SelenideElement firstNameInput = $("#firstName"),
                             lastNameInput = $("#lastName"),
                             userEmailInput = $("#userEmail"),
                             genderWrapper = $("#genterWrapper"),
@@ -100,14 +100,8 @@ public class RegistrationPage {
     }
     public void submit() {
         clickSubmit.click();
-
-
-       // sleep(10000);
-
     }
 
-
-    // checking Option 1
     public RegistrationPage checkResultTitle(String value) {
         tableComponents.checkDataTitle(value);
         return this;
@@ -118,12 +112,12 @@ public class RegistrationPage {
         return this;
     }
 
-    /* checking Option 2
 
-    public RegistrationPage checkResult(String key, String value) {
-        $(".table-responsive").$(byText(key)).parent()
-                .shouldHave(text(value));
-    return this;
+
+    // checkings for negative test
+    public void checkColorOfFirstName(String value) {
+        firstNameInput.getCssValue("border-color").equals(value);
+
     }
-*/
+
 }
