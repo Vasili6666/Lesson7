@@ -115,8 +115,8 @@ public class RegistrationPage {
 
 
     // checkings for negative test
-    public void checkColorOfFirstName(String value) {
-        firstNameInput.getCssValue("border-color").equals(value);
+    public void checkColorOfFirstName() {
+        firstNameInput.getCssValue("border-color").equals("#dc3545 ");
 
     }
 

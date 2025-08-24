@@ -14,7 +14,7 @@ public class NegativeRegistrationTest extends TestBase{
                     .submit();
 
             registrationPage
-                    .checkColorOfFirstName("#dc3545 ");
+                    .checkColorOfFirstName();
 
         }
 
