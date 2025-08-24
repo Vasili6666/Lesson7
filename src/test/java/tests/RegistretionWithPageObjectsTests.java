@@ -27,34 +27,19 @@ public class RegistretionWithPageObjectsTests extends TestBase {
                 .setAddress("Площадь Пушкина, пр-д Калатушкина, 6")
                 .setState("Haryana")
                 .setCity("Karnal")
-
-        //$("#subjectsInput").setValue("Biology").pressEnter();
-
-       /* $("#hobbiesWrapper").$(byText("Sports")).click();
-        $("#hobbiesWrapper").$(byText("Reading")).click();
-        $("#hobbiesWrapper").$(byText("Music")).click();
-*/
-
-        //$("#uploadPicture").uploadFromClasspath("Foto 07.2024.jpg");
+                .submit();
 
 
-        //$("#currentAddress").setValue("Площадь Пушкина, пр-д Калатушкина, 6");
-
-        /*$("#state").scrollTo().shouldBe(interactable).click();
-        $$("div[class*='-option']").findBy(text("Haryana")).click();
-        $("#city").scrollTo().shouldBe(interactable).click();
-        $$("div[class*='-option']").findBy(text("Karnal")).click();
-*/
-        $("#submit").click();
-
-        $(".modal-dialog").should(appear);
-        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".table-responsive").shouldHave(text("Alex"), text("Egorov"),
-                text("alex@egorov.com"), text("1234567890"));
-        registrationPage.checkResult("Student Name", "Alex Egorov")
-                .checkResult("Student Email", "alex@egorov.com");
-
-
+             registrationPage.checkResult("Student Name", "Basil Pupkin")
+                .checkResult("Student Email", "pupkin@basil.com")
+                .checkResult("Gender", "Male")
+                .checkResult("Mobile", "0441234567")
+                .checkResult("Date of Birth", "06 February,1982")
+                .checkResult("Subjects", "Biology")
+                .checkResult("Hobbies", "Sports")
+                .checkResult("Picture", "Foto 07.2024.jpg")
+                .checkResult("Address", "Площадь Пушкина, пр-д Калатушкина, 6")
+                .checkResult("State and City", "Haryana Karnal");
 
     }
 }

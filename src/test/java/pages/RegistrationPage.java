@@ -22,6 +22,7 @@ public class RegistrationPage {
                             stateInputForClicking = $("#state"),
                             stateCityInput =$("#stateCity-wrapper"),
                             cityInputForClicking = $("#city"),
+                            clickSubmit = $("#submit");
 
 
 
@@ -62,7 +63,7 @@ public class RegistrationPage {
         return this;
     }
     public RegistrationPage setSubjectsInput(String value) {
-        subjectsInput.setValue(value);
+        subjectsInput.setValue(value).pressEnter();
         return this;
     }
     public RegistrationPage setHobbies(String value) {
@@ -88,14 +89,13 @@ public class RegistrationPage {
         stateCityInput.$(byText(value)).click();
         return this;
     }
+    public void submit() {
+        clickSubmit.click();
 
 
+       // sleep(10000);
 
-
-
-
-
-
+    }
     // checking
     public RegistrationPage checkResult(String key, String value) {
         $(".table-responsive").$(byText(key)).parent()
