@@ -16,12 +16,6 @@ public class TextBoxPage {
             result = $("#output");
 
 
-    /*resultName = $("#output #name"),
-    resultEmail = $("#output #email"),
-    resultCurrentAddress =$("#output #currentAddress"),
-    resultPermanentAddress =$("#output #permanentAddress");*/
-
-
     public TextBoxPage openPage() {
         open("/text-box");
         $(".text-center").shouldHave(text("Text Box"));
@@ -58,26 +52,9 @@ public class TextBoxPage {
         clickSubmit.click();
     }
 
-    //output
+
     public void checkResult(String value) {
         result.shouldHave(partialText(value));
     }
 
-
-    /*public TextBoxPage checkName(String value){
-        resultName.shouldHave(partialText(value));
-        return this;
-    }
-    public TextBoxPage checkEmail(String value){
-        resultEmail.shouldHave(partialText(value));
-        return this;
-    }
-    public TextBoxPage checkCurrentAddress(String value){
-        resultCurrentAddress.shouldHave(text(value));
-        return this;
-    }
-    public void checkPermanentAddress(String value){
-        resultPermanentAddress.shouldHave(partialText(value));
-    }
-*/
 }

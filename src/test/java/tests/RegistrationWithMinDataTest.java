@@ -18,7 +18,7 @@ public class RegistrationWithMinDataTest extends TestBase {
                 .setEmail("pupkin@basil.com")
                 .submit();
 
-       registrationPage.checkResultTitle("Thanks for submitting the form")
+        registrationPage.checkResultTitle("Thanks for submitting the form")
                 .checkResultCells("Student Name", "Basil Pupkin")
                 .checkResultCells("Gender", "Male")
                 .checkResultCells("Mobile", "0441234567");
