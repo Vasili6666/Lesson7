@@ -32,9 +32,9 @@ public class CreateRandomData {
     }
 
     public static String getBirthMonth() {
-        String[] months = {"January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"};
-        return months[random.nextInt(months.length)];
+
+        return faker.options().option("January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December");
     }
 
     public static String getBirthYear() {
@@ -60,19 +60,20 @@ public class CreateRandomData {
     }
 
     public static String getSubjects() {
-        String[] subjects = {"Biology", "Chemistry", "Physics", "Maths", "English",
-                "Computer Science", "Economics", "Arts", "History"};
-        return subjects[random.nextInt(subjects.length)];
+
+        return faker.options().option("Biology", "Chemistry", "Physics", "Maths", "English",
+                "Computer Science", "Economics", "Arts", "History");
     }
 
     public static String getHobbies() {
-        String[] hobbies = {"Sports", "Reading", "Music"};
-        return hobbies[random.nextInt(hobbies.length)];
+
+        return faker.options().option("Sports", "Reading", "Music");
+
     }
 
     public static String getPicture() {
-        String[] pictures = {"Fish1.jpg", "Fish2.jpg", "Fish3.jpg"};
-        return pictures[random.nextInt(pictures.length)];
+
+        return faker.options().option("Fish1.jpg", "Fish2.jpg", "Fish3.jpg");
     }
 
     public static String getAddress() {
@@ -80,8 +81,8 @@ public class CreateRandomData {
     }
 
     public static String getState() {
-        String[] states = {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
-        return states[random.nextInt(states.length)];
+
+        return faker.options().option("NCR", "Uttar Pradesh", "Haryana", "Rajasthan");
     }
 
     public static String getCity(String state) {
