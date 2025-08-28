@@ -88,17 +88,17 @@ public class CreateRandomData {
     public static String getCity(String state) {
         switch (state) {
             case "NCR":
-                String[] ncrCities = {"Delhi", "Gurgaon", "Noida"};
-                return ncrCities[random.nextInt(ncrCities.length)];
+
+                return faker.options().option("Delhi", "Gurgaon", "Noida");
             case "Uttar Pradesh":
-                String[] upCities = {"Agra", "Lucknow", "Merrut"};
-                return upCities[random.nextInt(upCities.length)];
+
+                return faker.options().option("Agra", "Lucknow", "Merrut");
             case "Haryana":
-                String[] haryanaCities = {"Karnal", "Panipat"};
-                return haryanaCities[random.nextInt(haryanaCities.length)];
+
+                return faker.options().option("Karnal", "Panipat");
             case "Rajasthan":
-                String[] rajasthanCities = {"Jaipur", "Jaiselmer"};
-                return rajasthanCities[random.nextInt(rajasthanCities.length)];
+
+                return faker.options().option("Jaipur", "Jaiselmer");
             default:
                 return "Unknown";
         }
