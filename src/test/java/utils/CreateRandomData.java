@@ -24,8 +24,7 @@ public class CreateRandomData {
     }
 
     public static String getGender() {
-        String[] genders = {"Male", "Female", "Other"};
-        return genders[random.nextInt(genders.length)];
+        return faker.options().option("Male", "Female", "Other");
     }
 
     public static String getNumber() {
